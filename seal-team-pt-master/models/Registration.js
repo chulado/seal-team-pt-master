@@ -30,7 +30,8 @@ Registration.add({
   date: { type: Date, default: Date.now },
   stripeToken: { type: String },
   stripeEmail: { type: String },
-  stripeCharge: { type: String } 
+  stripeCharge: { type: String },
+  membershipType: { type: Types.Relationship, ref: 'MembershipType', many: false, required: true } 
 });
 
 

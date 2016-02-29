@@ -45,7 +45,7 @@
 				{{/if}}
 				<!--<h2>Join today &amp; get the first month for free.*</h2>-->
 				
-				<h2>Join today and pay only $39.99 down.</h2> 
+				<h2>Sign up for the 2 week boot camp.</h2> 
 			
 				
 				<p>Your first month of membership will be prorated based upon the day you join. Monthly membership dues will start on the first of the month.</p>
@@ -61,37 +61,36 @@
 				<p class="lead">Choose your location</p>
 				
 				<table class="table">
-					<tr class="head-one">
+					<tr class="head-sub">
 						<th></th>
-						<th>Location</th>
-						<th colspan="3">Contract length</th>
+						<th></th>
+		
 					</tr>
 					<tr class="head-sub">
 						<td></td>
-						<td></td>
-						<td>1 month</td>
-						<td>6 months</td>
-						<td>12 months</td>
+						<td>Location</td>
+						<td style="width:20%">Regular</td>
+						<td style="width:20%">Professional</td>
+						<td style="width:20%">Student</td>
 					</tr>
 					{{#each locations}}
 						<tr>
 							<td><input type="radio" name="location" value="{{id}}"></td>
 							<td>{{name}}</td>
-							<td>${{price.oneMonth}} <small>/ month</small></td>
-							<td>${{price.sixMonths}} <small>/ month</small></td>
-							<td>${{price.twelveMonths}} <small>/ month</small></td>
+							<td>${{price.oneMonth}}</td>
+							<td>${{price.sixMonths}}</td>
+							<td>${{price.twelveMonths}}</td>
 						</tr>
 					{{/each}}
 				</table>
+				<br>
 
-				<div class="form-group {{#if validationErrors.contractLength}}has-error{{/if}}">
-					<label for="name">Contract Length</label>
-					<select name="contractLength" class="form-control">
-					<option value="twelve-months" {{#ifeq formData.contractLength "twelve-months"}}selected{{/ifeq}}>12 months</option>
-					<option value="six-months" {{#ifeq formData.contractLength "six-months"}}selected{{/ifeq}}>6 months</option>
-					<option value="one-month" {{#ifeq formData.contractLength "one-month"}}selected{{/ifeq}}>1 month</option>
-						
-						
+				<div class="form-group {{#if validationErrors.membershipType}}has-error{{/if}}">
+					<label for="name">Choose Membership Type</label>
+					<select name="membershipType" class="form-control">
+					{{#each membershipTypes}}
+						<option value="{{this._id}}" {{#ifeq formData.membershipType this._id}}selected{{/ifeq}}>{{this.name}}</option>
+					{{/each}}
 					</select>
 				</div>
 
@@ -211,7 +210,7 @@
 		{{#ifeq step "three"}}
 			<h2>Almost Finished!</h2>
 
-			<p>A registration fee of 39.99 is due today. After your payment is made you will receive an email containing a link that you can use to print your <a href="/join/agreement/{{registration.id}}" target="_blank">signed membership agreement</a>.
+			<p>A registration fee of ${{dueToday}} is due today. After your payment is made you will receive an email containing a link that you can use to print your <a href="/join/agreement/{{registration.id}}" target="_blank">signed membership agreement</a>.
 <!--
 			as well as instructions for completing a <a href="https://rightsignature.com/forms/Waiver7may2013-8826b4/token/40eba9eb163" target="_blank">participation waiver</a>.--></p>
 
@@ -226,7 +225,7 @@
 			    data-image="//sealteampt.com/images/logo2.png"
 			    data-name="Seal Team Physical Training"
 			    data-description="New Member Registration Fee"
-			    data-amount="3999">
+			    data-amount="{{stripeAmount}}">
 			  </script>
 			</form>
 			<p>&nbsp;</p>
