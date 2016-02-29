@@ -1,0 +1,13 @@
+{
+  "name": "seal-team-pt",
+  "version": "0.0.0",
+  "authors": [
+    "Conrad VanLandingham <cv@utexas.edu>"
+  ],
+  "license": "NONE",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.0.2",
+    "owl.carousel": "OwlFonk/OwlCarousel2"
+  }
+}

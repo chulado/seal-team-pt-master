@@ -1,0 +1,59 @@
+{{#contentFor "title"}}Request John McGuire's Availability{{/contentFor}}
+{{#contentFor "meta"}}
+  <meta name="robots" content="noindex">
+{{/contentFor}}
+
+<div class="slanted-header first-thing">
+  <div class="container">
+    <h1>Request Availability</h1>
+    <p class="lead">Get more information on John McGuire, including availability, detailed speaking topics, and fees.</p>
+  </div>
+</div>
+
+<div class="page-section page-section-light page-section-narrow first thing">
+  <div class="container">
+
+				{{#if enquirySubmitted}}
+					<h2>Thank You</h2>
+					<p>John looks forward to speaking at your next business seminar, conference or event. We'll be in touch real soon. Hooyah!</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+
+				{{else}}
+					<form method="post">
+						<input type="hidden" name="action" value="contact">
+						<input type="hidden" name="enquiryType" value="speaking">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Name</label>
+							<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+						</div>
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Company/Organization Name</label>
+							<input type="text" name="company.name"  class="form-control" value="{{formData.[company.name]}}">
+						</div>
+						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+							<label>Email</label>
+							<input type="email" name="email" class="form-control" value="{{formData.email}}">
+						</div>
+						<div class="form-group">
+							<label>Phone</label>
+							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+						</div>
+						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+							<label>Message</label>
+							<textarea name="message" placeholder="Tell us about your organization..." rows="4" class="form-control">{{formData.message}}</textarea>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Send</button>
+						</div>
+					</form>
+				{{/if}}
+			
+
+
+  </div>
+</div>
+
+

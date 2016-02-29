@@ -1,0 +1,71 @@
+.form-status {
+  display: flex;
+  justify-content: space-between; 
+  position: relative;
+  height: 1px;
+  background: $gray;
+
+ /* &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $gray;*/
+
+  .step {
+    position: relative;
+    text-align: center;
+    padding-top: 15px;
+    color: $gray-light;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      top: -11px;
+      left: 50%;
+      margin-left: -11px;
+      background: $gray;
+      border: 8px solid #0c0616;
+      box-sizing: content-box;
+    }
+
+    &:first-child, &:last-child {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        right: 0;
+        height: 1px;
+        background: black;
+      }
+    }
+    &:first-child:before { right: 50%; }
+    &:last-child:before { left: 50%; }
+
+    &.active {
+      color: white;
+      &:after { background: $brand-yellow; }
+    }
+  }
+
+}
+
+.signature-area {
+  canvas { width: 100%; border: 1px solid $gray-light; }
+}
+
+.table {
+  .head-one {
+    th, td { padding-bottom:0; background:$gray-lighter; }
+  }
+
+  .head-sub {
+    th, td { border:none;padding-top:0; background:$gray-lighter; }
+  }
+}

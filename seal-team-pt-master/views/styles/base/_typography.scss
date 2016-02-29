@@ -1,0 +1,76 @@
+h1 {
+  font-family: $font-family-jarhead;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  @include responsive-font-size(95);
+  line-height: 0.9em;
+  //padding-bottom: 5%;
+
+  &.grande {
+    @include responsive-font-size(166);
+  }
+}
+
+h2 {
+  font-family: $font-family-jarhead;
+  text-transform: uppercase;
+  @include responsive-font-size(42);
+  line-height: 0.9em;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: $font-family-large-type;
+  @include responsive-font-size(30);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: $font-family-large-type;
+  @include responsive-font-size(16);
+  color: $brand-yellow;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h5 { 
+  font-family: $font-family-large-type;
+  @include responsive-font-size(14);
+  color: #595959;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h1,h2,h3,h4,h5 { &.light { font-weight: 100; }}
+
+h5 { }
+
+p, .list {
+  font-size: 18px;
+  color: #595959;
+}
+
+.lead {
+  color: $gray-light;
+  font-weight: 500;
+  @include responsive-font-size(30);
+  line-height: 1.1em;
+}
+.grande {
+  color: $gray-light;
+  font-weight: 500;
+  @include responsive-font-size(30);
+  line-height: 1.1em;
+}
+
+a {
+  &:hover { text-decoration: none; }
+} 
+.container page-section-centered centered a {
+  text-transform: lowercase;
+} 
+.icon {
+  font-size: 24px;
+  font-weight: 100 !important;
+}

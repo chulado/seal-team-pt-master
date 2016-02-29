@@ -1,0 +1,33 @@
+.navbar-secondary {
+  @extend .navbar-inverted;
+  padding-top: 30px;
+  margin-bottom: 4px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  font-family: $font-family-large-type;
+
+
+  .icon-bar { background: $gray; }
+  .navbar-brand {
+    color: $brand-yellow;
+
+  }
+
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    color: #d0d0d0;
+    transition: color 0.5s;
+
+    &:hover {
+      background: none !important;
+      color: #fff;
+    }
+
+    .icon { font-size: 10px; color: #d0d0d0; }
+  }
+}

@@ -1,0 +1,60 @@
+{{#contentFor "title"}}Athletic Team Building{{/contentFor}}
+{{#contentFor "meta"}}
+  <meta name="robots" content="noindex">
+{{/contentFor}}
+
+<div class="slanted-header first-thing">
+  <div class="container">
+    <h1>Athletic Team Building</h1>
+	<h2>A Better Product On And Off The Field</h2>
+    <p class="lead">Get more information on our athletic team building program.</p>
+  </div>
+</div>
+
+<div class="page-section page-section-light page-section-narrow first thing">
+  <div class="container">
+
+				{{#if enquirySubmitted}}
+					<h2>Thank You</h2>
+					<p>John looks forward to visiting with your team. We'll be in touch real soon. <strong>Hooyah!</strong></p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+
+				{{else}}
+					<form method="post">
+						<input type="hidden" name="action" value="contact">
+						<input type="hidden" name="enquiryType" value="athletic-training">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Name</label>
+							<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+						</div>
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>School/Team Name</label>
+							<input type="text" name="team.name"  class="form-control" value="{{formData.[team.name]}}">
+						</div>
+						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+							<label>Email</label>
+							<input type="email" name="email" class="form-control" value="{{formData.email}}">
+						</div>
+						<div class="form-group">
+							<label>Phone</label>
+							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+						</div>
+						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+							<label>Message</label>
+							<textarea name="message" placeholder="Tell us about your school or team..." rows="4" class="form-control">{{formData.message}}</textarea>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Send</button>
+						</div>
+					</form>
+				{{/if}}
+			
+
+
+  </div>
+</div>
+
+

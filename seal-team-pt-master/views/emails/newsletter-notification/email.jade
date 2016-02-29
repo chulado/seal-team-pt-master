@@ -1,0 +1,13 @@
+extends /layouts/default
+
+block body-contents
+  h1 Hi *|first_name|*,
+  p.text-larger A newsletter subscription was submitted for #{brand}:
+  if enquiry.email
+    p.text-larger From 
+      if enquiry.email
+        | <a href="mailto:#{enquiry.email}">#{enquiry.email}</a>
+
+  p.text-muted Sent #{enquiry._.createdAt.format()}
+  p &nbsp;
+  +button({ url: '/keystone/enquiries/' + enquiry.id, label: 'Open Keystone' })

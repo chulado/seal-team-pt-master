@@ -1,0 +1,109 @@
+{{#contentFor "title"}}Try a Free
+Training Class - The Platoon is Waiting for You{{/contentFor}}
+{{#contentFor "meta"}}
+<meta name="description" content="Try a free SEAL Team Physical Training class. Free one hour trial classes are offered every Thursday.">
+<meta property="og:title" content="SEAL Team Physical Training">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://sealteampt.com/join">
+<meta property="og:image" content="http://sealteampt.com/images/sm/fb.png">
+<meta property="og:description" content="Try a free SEAL Team Physical Training class. Free one hour trial classes are offered every Thursday.">
+{{/contentFor}}
+
+{{#if enquirySubmitted}}
+  {{>trial-confirm}}
+{{else}}
+<div class="page-section page-section-light page-section-narrow first-thing">
+  <div class="container">
+  <h1>Try a Free <br>
+  Training Class</h1>
+  <h2>The platoon is waiting for you.</h2>
+  <p class="lead">Free one hour trial classes are offered every Thursday at the following locations.</p>
+  <p>&nbsp;</p>
+  <!--<h4>Free Class Locations and Times (Thursday Only)</h4>-->
+  <hr style="padding-bottom:22px">
+
+  <div style="padding-left:0" class="col-md-4">
+  <p><strong>Richmond</strong><br>
+  	5:45am / 9:30am / 6:00pm<br> 
+  	<a href="https://maps.google.com/maps/ms?msid=201827828954295579738.000499bf884be9672bd66&msa=0&dg=feature" target="blank">Dogwood Dell</a>
+  </p>
+</div>
+<div style="padding-left:0" class="col-md-4">
+  <p><strong>Richmond, West End</strong><br>
+  	5:45am / 6:00pm <br>
+  	<a href="https://www.google.com/maps/d/viewer?ll=37.662336,-77.575729&msa=0&spn=0.00462,0.009012&mid=zdvMO6IgT8n4.kKqCtA-YHx5A" target="blank">Waterfront Lake</a>
+  </p>
+</div>
+<div style="padding-left:0" class="col-md-4">
+  <p><strong>Charlottesville</strong><br>
+  	6:00am <br>
+  	<a href="https://www.google.com/maps/place/McIntire+Park/@38.048636,-78.476484,17z/data=!3m1!4b1!4m2!3m1!1s0x89b387d5c5a6d0e3:0x38cabe1e3a546ae4" target="blank">McIntire Park</a>
+  </p>
+</div>
+ 
+ <div class="clearfix"></div>
+
+<div style="padding-left:0" class="col-md-4">
+  <p><strong>Washington, DC</strong><br>
+  	5:45am<br>
+  	<a href="https://maps.google.com/maps/ms?msid=201827828954295579738.00049905cec532a3fa62e&msa=0&dg=feature" target="blank">Washington Monument</a>
+  </p>
+</div>
+  
+  <div style="padding-left:0" class="col-md-4">
+  <p><strong>Philadelphia</strong><br>
+  	5:45am<br>
+  	<a href="https://www.google.com/maps/place/Waterworks+Dr/@39.96773,-75.183713,16z/data=!4m2!3m1!1s0x89c6c7b14c4c612d:0x17bc76e675fcceaa?hl=en" target="blank">Waterworks Drive</a>
+  </p>
+</div>
+<div class="clearfix"></div>
+<hr>
+<p><small>*One free class per person. Additional classes will require a fee.</small></p>
+  
+  <p>&nbsp;</p>
+  <h3>Personal Information</h3>
+
+				{{#if enquirySubmitted}}
+					<h3>Thanks for getting in touch.</h3>
+				{{else}}
+					<form method="post">
+						<input type="hidden" name="action" value="contact">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>First/Last Name</label>
+							<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+						</div>
+						
+						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+							<label>Email</label>
+							<input type="email" name="email" class="form-control" value="{{formData.email}}">
+						</div>
+						<div class="form-group">
+							<label>Phone</label>
+							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+						</div>
+							<div class="form-group {{#if validationErrors.location}}has-error{{/if}}">
+							<label>Choose a City -- this is where you will report for your free class</label>
+							<select name="location" class="form-control">
+							<option value="">(select one)</option>
+							<option value="Richmond">Richmond</option>
+							<option value="WestEnd">Richmond, West End</option>
+							<option value="Charlottesville">Charlottesville</option>
+							<option value="DC">Washington, DC</option>
+							<option value="Philly">Philadelphia</option>
+							</select>
+						</div>
+						<p>&nbsp;</p>
+						
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Send</button>
+						</div>
+					</form>
+				{{/if}}
+			
+
+
+  </div>
+</div>
+
+
+{{/if}}

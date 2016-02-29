@@ -1,0 +1,49 @@
+extends /layouts/default
+
+block body-contents
+  h1 Hi #{registration.name.first} #{registration.name.last},
+  p.text-larger Thanks for becomming a member of SEAL Team Physical Training!
+  p &nbsp;
+  p
+    | This email is to serve as confirmation of your registration as a new member. You will receive a separate email for your credit card receipt.
+  p &nbsp;
+  p
+    | Please see links below for a copy of your signed agreement and be sure to 
+    strong complete the participation waiver
+    |  before attending your first class. Hooyah!
+  p &nbsp;
+  +button({ url: "http://sealteampt.com/join/agreement/" + registration.id, label: "View Signed Agreement" })
+  br
+  +button({ url: 'https://rightsignature.com/forms/Waiver7may2013-8826b4/token/40eba9eb163', label: 'Participation Waiver' })
+  p &nbsp;
+  h4 Important Information
+  p
+    | Within 1 business day, our HQ Team will contact you via phone to complete set up of your membership.  We 
+    strong cannot complete
+    |  set up of your membership with SEAL Team Physical Training until we speak to you.
+  p &nbsp;
+  p
+    | Once we speak, you will be given log-in credentials to our member portal which contains out weekly schedule. Access to the membership portal is important because classes are held at a different location each day.
+  p &nbsp;
+  h4 Billing Information
+  p
+    | Your SEAL Team Physical Training membership will be prorated for the remainder of the current month.  Regular monthly billing will be on the first of each month going forward.  Memberships automatically renew unless notice is given to cancel.  Please be sure to save a copy of your membership agreement as all terms and conditions are stated within.
+  p &nbsp;
+  p
+    | If you have questions regarding your new membership, please reply to this email or call (804) 262-1894 between the hours of 9am -3pm (M-F).
+  p &nbsp;
+  p *The initiation fee of $39.99 is non-refundable.
+  p &nbsp;
+  p
+    | Navy SEAL John McGuire
+    br
+    | SEAL Team Physical Training, Inc.
+    br
+    | 10809 West Broad Street
+    br
+    | Glen Allen, VA 23060
+    br
+    | (804) 262-1894
+    br
+
+  

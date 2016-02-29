@@ -1,0 +1,79 @@
+.clearfix {
+  clear: both;  
+}
+.page-section {
+  position: relative;
+
+  .container {
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+
+  img { max-width: 100%; }
+}
+
+.first-thing {
+  margin-top: 95px !important;
+
+  @media(max-width:$screen-sm) {
+    margin-top: 76px !important;
+  }
+}
+
+.page-section-light {
+  background-image: url(/images/texture-bg.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h4 { color: $brand-purple; }
+  h2 { color: $brand-blue; }
+
+}
+
+.page-section-lighter {
+  @extend .pages-section-light;
+  background-image: none;
+  background: $gray-lighter;
+}
+
+.page-section-lightest {
+  background: white;
+  
+  h1, h2 { color: $brand-blue; margin: 0; padding: 0; }
+  h1 + h2 { color: #999; }
+}
+
+.page-section-dark {
+  &, p, .list { color: lighten($gray, 10%); }
+
+  h1, h2, h3 { color: white; }
+}
+
+.page-section-light, .page-section-lightest {
+  p.lead {
+    color: $gray;
+  }
+
+}
+
+.page-section-narrow {
+  .container { max-width: 760px; }
+}
+
+
+.page-section-centered {
+  text-align: center;
+}
+
+.centered-image {
+  img { margin-top: 25px; border: 5px solid white; max-width: 100%; box-sizing: border-box; }
+}
+
+.page-section.header {
+  p.lead { padding: 0; margin: 0; }
+}

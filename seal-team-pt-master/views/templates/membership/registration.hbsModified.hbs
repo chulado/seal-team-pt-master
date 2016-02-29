@@ -1,0 +1,248 @@
+{{#contentFor "title"}}Join SEAL Team Physical Training - Virginia, DC, Philadelphia{{/contentFor}}
+{{#contentFor "meta"}}
+<meta name="description" content="Join SEAL Team Physical with locations in Richmond VA, Charlottesville VA, Washington DC and Philadelphia.">
+<meta property="og:title" content="SEAL Team Physical Training">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://sealteampt.com/join/register">
+<meta property="og:image" content="http://sealteampt.com/images/sm/fb.png">
+<meta property="og:description" content="Join SEAL Team Physical with locations in Richmond VA, Charlottesville VA, Washington DC and Philadelphia.">
+{{/contentFor}}
+
+<div class="page-section page-section-light page-section-narrow first-thing">
+  <div class="container">
+    <h1>SEAL Team Physical Training</h1>
+	<h2>Join the team</h2>
+
+  </div>
+</div>
+
+
+<div class="page-section page-section-dark page-section-narrow">
+	<div class="container">
+		<div class="form-status">
+			<div class="step {{#ifeq step "one"}}active{{/ifeq}}">
+				Basic Information
+			</div>
+			<div class="step {{#ifeq step "two"}}active{{/ifeq}}">
+				Agreement
+			</div>
+			<div class="step {{#ifeq step "three"}}active{{/ifeq}}">
+				Payment
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page-section page-section-lighter page-section-narrow">
+  <div class="container">
+		{{#ifeq step "one"}}
+			<form method="post" action="#registration-1" id="registration-1">
+				<input type="hidden" name="action" value="registration-1">
+
+				
+				{{#if validationErrors.location}}
+					<div class="alert alert-danger">Please specify a location</div>
+				{{/if}}
+				<!--<h2>Join today &amp; get the first month for free.*</h2>-->
+				
+				<h2>Join today and pay only $39.99 down.</h2> 
+			
+				
+				<p>Your first month of membership will be prorated based upon the day you join. Monthly membership dues will start on the first of the month.</p>
+				
+				<p>A portion of every new membership is donated to the <a href="http://www.navysealfoundation.org/" target="blank">Navy SEAL Foundation</a>. To date, <strong>we have donated over $24,000</strong> in support of the Naval Special Warfare Community and its families. </p>
+
+				<!--
+				<small>*Requires a 6 or 12 month membership. Offer expires February 1, 2016. No coupon code needed. </small>
+			-->
+				
+				<p>&nbsp;</p>
+
+				<p class="lead">Choose your location</p>
+				
+				<table class="table">
+					<tr class="head-sub">
+						<th></th>
+						<th></th>
+		
+					</tr>
+					<tr class="head-sub">
+						<td></td>
+						<td>Location</td>
+						<td style="width:20%">Regular</td>
+						<td style="width:20%">Professional</td>
+						<td style="width:20%">Student</td>
+					</tr>
+					{{#each locations}}
+						<tr>
+							<td><input type="radio" name="location" value="{{id}}"></td>
+							<td>{{name}}</td>
+							<td>${{price.oneMonth}}</td>
+							<td>${{price.sixMonths}}</td>
+							<td>${{price.twelveMonths}}</td>
+						</tr>
+					{{/each}}
+				</table>
+				<br>
+				<div class="form-group {{#if validationErrors.contractLength}}has-error{{/if}}">
+					<label for="name">Choose Membership Type</label>
+					<select name="contractLength" class="form-control">
+					<option value="twelve-months" {{#ifeq formData.contractLength "twelve-months"}}selected{{/ifeq}}>Regular</option>
+					<option value="six-months" {{#ifeq formData.contractLength "six-months"}}selected{{/ifeq}}>Professional</option>
+					<option value="one-month" {{#ifeq formData.contractLength "one-month"}}selected{{/ifeq}}>Student</option>
+						
+						
+					</select>
+				</div>
+
+
+				<hr>
+
+				<br>
+				<p class="lead">Personal information</p>
+
+				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+					<label for="name">Full Name</label>
+					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+				</div>
+				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+					<label for="email">Email</label>
+					<input type="email" name="email" class="form-control" value="{{formData.email}}">
+				</div>
+				<div class="form-group {{#if validationErrors.phone}}has-error{{/if}}">
+					<label for="phone">Phone</label>
+					<input type="tel" name="phone" class="form-control" value="{{formData.phone}}">
+				</div>
+				<div class="form-group {{#if validationErrors.birthday}}has-error{{/if}}">
+					<label for="birthday">Date of Birth &nbsp;mm/dd/yyyy</label>
+					<input type="date" name="birthday" class="form-control" value="{{formData.birthday}}">
+				</div>
+					<div class="form-group {{#if validationErrors.nameReferredBy}}has-error{{/if}}">
+					<label for="nameReferredBy">Name of Person Who Referred You to Our Program</label>
+					<input type="text" name="nameReferredBy"  class="form-control" value="{{formData.nameReferredBy}}">
+				</div>
+				
+				<div class="form-group {{#if validationErrors.tshirt}}has-error{{/if}}">
+					<label for="tshirt">Your T-Shirt Size (unisex)</label>
+					<select name="tshirt" class="form-control">
+							<option value="">(select one)</option>
+							<option value="Small" {{#ifeq formData.tshirt "Small"}}selected{{/ifeq}}>Small</option>
+							<option value="Medium" {{#ifeq formData.tshirt "Medium"}}selected{{/ifeq}}>Medium</option>
+							<option value="Large" {{#ifeq formData.tshirt "Large"}}selected{{/ifeq}}>Large</option>
+							<option value="XL" {{#ifeq formData.tshirt "XL"}}selected{{/ifeq}}>XL</option>
+							<option value="XXL" {{#ifeq formData.tshirt "XXL"}}selected{{/ifeq}}>XXL</option>
+							</select>
+				</div>
+					<hr>
+
+				<div class="form-group {{#if validationErrors.address}}has-error{{/if}}">
+					<label for="address">Address</label>
+					<textarea name="address" rows="2" class="form-control">{{formData.address}}</textarea>
+				</div>
+
+				<div class="row">
+				<div class="form-group col-sm-5 {{#if validationErrors.city}}has-error{{/if}}">
+					<label for="city">City</label>
+					<input type="text" name="city" class="form-control" value="{{formData.city}}">
+				</div>
+
+				<div class="form-group col-sm-5 {{#if validationErrors.state}}has-error{{/if}}">
+					<label for="state">State</label>
+					<select name="state" class="form-control">
+
+						{{#each states}}
+							<option value="{{value}}" {{#ifeq ../formData.state value}}selected{{/ifeq}}>{{label}}</option>
+						{{/each}}
+					</select>
+				</div>
+
+				<div class="form-group col-sm-2 {{#if validationErrors.zip}}has-error{{/if}}">
+					<label for="zip">Zip Code</label>
+					<input type="text" name="zip" class="form-control" value="{{formData.zip}}">
+				</div>
+				</div>
+				<hr>
+				<p class="lead">Experience SEAL Team Physical Training with a buddy</p>
+				<p>When someone you refer becomes a member, we'll give you <strong>one free month</strong> of membership.</p>
+				<div class="form-group {{#if validationErrors.nameReferral}}has-error{{/if}}">
+					<label for="nameReferral">Your Friend's Name</label>
+					<input type="text" name="nameReferral"  class="form-control" value="{{formData.nameReferral}}">
+				</div>
+
+
+				<div class="form-group {{#if validationErrors.telephoneReferral}}has-error{{/if}}">
+					<label for="telephoneReferral">Telephone</label>
+					<input type="text" name="telephoneReferral" class="form-control" value="{{formData.telephoneReferral}}">
+				</div>
+
+				<div class="form-group {{#if validationErrors.emailReferral}}has-error{{/if}}">
+					<label for="emailReferral">Email</label>
+					<input type="email" name="emailReferral" class="form-control" value="{{formData.emailReferral}}">
+				</div>
+
+				<hr>
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn-cta">Next</button>
+				</div>
+			</form>
+		{{/ifeq}}
+		
+		{{#ifeq step "two"}}
+			{{> contract}}
+			<form method="post" action="#registration-2" id="registration-2s">
+				<input type="hidden" name="action" value="registration-2">
+				<input type="hidden" name="registration" value="{{registration.id}}">
+				<input type="hidden" name="signature" value="{{formData.signature}}">
+				<p><strong>Please use your finger, mouse, or pen to sign in the area below.</strong></p>
+				<div class="signature-area">
+					<div class="signature-area-body">
+						<canvas></canvas>
+					</div>
+					<button type="button" class="clear-signature btn btn-secondary">Clear</button>
+				</div>
+				<hr>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-cta">Next</button>
+				</div>
+			</form>
+		{{/ifeq}}
+
+		{{#ifeq step "three"}}
+			<h2>Almost Finished!</h2>
+
+			<p>A registration fee of 39.99 is due today. After your payment is made you will receive an email containing a link that you can use to print your <a href="/join/agreement/{{registration.id}}" target="_blank">signed membership agreement</a>.
+<!--
+			as well as instructions for completing a <a href="https://rightsignature.com/forms/Waiver7may2013-8826b4/token/40eba9eb163" target="_blank">participation waiver</a>.--></p>
+
+
+
+			<form method="post" action="#registration-3" id="registration-3s">
+				<input type="hidden" name="action" value="registration-3">
+				<input type="hidden" name="registration" value="{{registration.id}}">
+			  <script
+			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			    data-key="pk_live_hHfbwdmQRoqDe6nokMB33Ih2"
+			    data-image="//sealteampt.com/images/logo2.png"
+			    data-name="Seal Team Physical Training"
+			    data-description="New Member Registration Fee"
+			    data-amount="3999">
+			  </script>
+			</form>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+		{{/ifeq}}
+
+		{{#ifeq step "done"}}
+			<h2>Finished!</h2>
+			<p>You will receive an email shortly confirming your registration.</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+		{{/ifeq}}
+
+  </div>
+</div>
+
+

@@ -1,0 +1,143 @@
+/*
+  Variables
+*/
+$font-family-jarhead: "refrigerator-deluxe";
+$font-family-large-type: "brandon-grotesque";
+$font-family-small-type: "freight-sans-pro";
+
+$font-family-primary: $font-family-small-type;
+$font-family-secondary: $font-family-large-type;
+$font-family-sans-serif: $font-family-primary;
+
+$brand-yellow: #F4D225;
+$brand-blue: #172e57;
+$brand-purple: #1b1b3e;
+$brand-red: #bc0000;
+
+$gray-light: #c1c1c1;
+$slant: 10deg;
+
+$screen-sm: 770px;
+
+/*
+  Vendor Import
+*/
+@import "bootstrap-load";
+
+/*
+  Load stylesheets
+
+  Naming guide:
+    "Base" is used for general elements and very basic setup
+    "Pages" is used for page-specific styles
+    "Modules" is used for styling modular content. You could call them components. <div class="component-name"> == "modules/_component-name" == .component-name { }
+*/
+
+
+// Base
+@import "base/mixins";
+@import "base/icons";
+@import "base/buttons";
+@import "base/misc";
+@import "base/typography";
+@import "base/forms";
+
+// Modules
+@import "modules/carousel";
+@import "modules/cover";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/navbar-secondary";
+@import "modules/page-section";
+@import "modules/photo-header";
+@import "modules/slanted-blocks";
+@import "modules/slanted-header";
+@import "modules/slanted-section";
+@import "modules/our-locations";
+@import "modules/news";
+
+// Pages
+@import "pages/home";
+@import "pages/registrations";
+
+
+// Responsive sh**
+/* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    
+    /*
+    Label the data
+    
+    td:nth-of-type(1):before { content: "First Name"; }
+    td:nth-of-type(2):before { content: "Last Name"; }
+    td:nth-of-type(3):before { content: "Job Title"; }
+    td:nth-of-type(4):before { content: "Favorite Color"; }
+    td:nth-of-type(5):before { content: "Wars of Trek?"; }*/
+  }
+
+blockquote {;
+  border-left: 1px solid #fff;
+  margin: 1.5em 1px;
+  padding: 0.5em 7px;
+  quotes: "\201C""\201D";
+}
+blockquote:before {
+  color: #5f5e5e;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  clear: both;
+}
+@media(max-width: $screen-sm) {
+  .container {
+    overflow-x: auto;
+  }
+
+  .form-status {
+    display: none;
+  }
+}

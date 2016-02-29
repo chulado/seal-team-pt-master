@@ -1,0 +1,109 @@
+.slanted-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+
+  .slanted-section-col {
+    @include preserve-3d;
+    @media(min-width: $screen-sm) {
+      width: 55vw;
+    }
+
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    justify-content: center;
+
+    .slanted-section-col-inner {
+      background-image: url(/images/texture-bg.gif);
+      background-repeat: no-repeat;
+      background-size: 120% auto;
+      background-position: top right;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .container {
+      max-width: 100%;
+      width: 310px;
+      padding: 8vw 0;
+    }
+
+    @media(min-width: $screen-sm) {
+      &:nth-child(2) {
+        position: absolute;
+        right: -5vw;
+        top: 0;
+        bottom: 0;
+        width: 56vw;
+        transform: skewX(-1 * $slant);
+        .slanted-section-col-inner {
+          transform: skewX($slant);
+          min-width: 120%;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+
+    h1, h2 { color: #999999; margin: 0; padding: 0; }
+    h4 { color: $brand-purple; padding-top: 20px; }
+  }
+}
+
+.angled-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+
+  .angled-section-col {
+    @include preserve-3d;
+    @media(min-width: $screen-sm) {
+      width: 55vw;
+    }
+
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    justify-content: center;
+
+    .angled-section-col-inner {
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-size: 120% auto;
+      background-position: top right;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .container {
+      max-width: 100%;
+      width: 310px;
+      padding: 8vw 0;
+    }
+
+    @media(min-width: $screen-sm) {
+      &:nth-child(2) {
+        position: absolute;
+        right: -5vw;
+        top: 0;
+        bottom: 0;
+        width: 56vw;
+        transform: skewX(-1 * $slant);
+        .slanted-section-col-inner {
+          transform: skewX($slant);
+          min-width: 120%;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+
+    h1, h2 { color: #999999; margin: 0; padding: 0; }
+    h4 { color: $brand-purple; padding-top: 20px; }
+  }
+}

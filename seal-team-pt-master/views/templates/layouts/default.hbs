@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{{{block "title"}}}</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link href="/app/app.css" rel="stylesheet">
+		{{{block "meta"}}}
+		
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor 
+			- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+		
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" />
+		<![endif]-->
+
+		<script src="//use.typekit.net/hwq1vyj.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29471731-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta name="google-site-verification" content="eB7FcmimmWQQ8BJ6Sj5DyV1dpvVQDPNwOUJQtojF2go" />
+	</head>
+	<body>
+		
+		{{>header}}
+
+		<div id="body">
+			{{{body}}}
+		</div>
+
+		
+
+		{{>footer}}
+		
+		<script type="text/javascript" src="/app/app.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+		{{{isAdminEditorJS user}}}
+		
+		<script type='text/javascript'>
+			$(function() { require("appkit/app").default(); });
+		</script>
+	</body>
+</html>

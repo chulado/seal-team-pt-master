@@ -1,0 +1,31 @@
+<div class="page-section page-section-lightest first-thing page-section-centered">
+	<div class='container'>
+			<h3>{{data.post.title}}</h3>
+			<h4>
+				{{{categoryList data.post.categories prefix="Posted in "}}}
+				{{#if author.name.first}}by {{author.name.first}}{{/if}}
+			</h4>
+
+			<br>
+			{{#if data.post.image.url}}
+				<img src="{{{data.post.image.url}}}" class="centered-image">
+			{{/if}}
+			{{#if data.post.caption}}
+				<p>{{data.post.caption}}</p>
+			{{/if}}
+	</div>
+</div>
+<div class="page-container page-section-light page-section-narrow">		
+		<div class="container">
+			<br>
+			<article>
+				<p><a href="/news">&larr; back to news</a></p>
+				
+				<div class="post">
+					{{{data.post.content.extended.html}}}
+				</div>
+			</article>
+			<br>
+			<br>
+		</div>
+</div>

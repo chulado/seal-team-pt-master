@@ -1,0 +1,47 @@
+ #body {
+ position: relative;
+}
+  .cover-heading {
+  @extend .container;
+  @include horizontal-center;
+
+  
+  bottom: 5%;
+  position: absolute;
+  //left: 130 / 1300 * 100%;
+  //right: 130 / 1300 * 100%;
+  //text-align: center;
+  z-index: +1;
+
+  //width: 50%;
+
+  .lead { color: $brand-yellow; }
+}
+
+.cover-heading h2 {
+	color:#f1f1f1;
+}
+@media(max-width: $screen-sm) {
+  .cover-heading {
+  @extend .container;
+  @include horizontal-center;
+  
+  bottom: 5%;
+  position: absolute;
+  //left: 130 / 1300 * 100%;
+  //right: 130 / 1300 * 100%;
+  //text-align: center;
+  z-index: +1;
+
+  //width: 50%
+    
+  }
+}
+@media(max-width: $screen-sm) {
+  .cover-heading {
+  .lead { 
+  font-size: 1px;
+  visibility: hidden; }
+    
+  }
+}

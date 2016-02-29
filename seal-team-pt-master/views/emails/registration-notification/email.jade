@@ -1,0 +1,19 @@
+extends /layouts/default
+
+block body-contents
+  h1 Hi *|first_name|*,
+  p.text-larger A registration was just submitted to #{brand}:
+  if registration.name.full || registration.email
+    p.text-larger From 
+      if registration.name.full
+        | <strong>#{registration.name.full}</strong>
+      if registration.name.full && registration.email
+        |  (
+      if registration.email
+        | <a href="mailto:#{registration.email}">#{registration.email}</a>
+      if registration.name.full && registration.email
+        | )
+  p &nbsp;
+  +button({ url: "http://sealteampt.com/join/agreement/" + registration.id, label: "View Signed Agreement" })
+  br
+  +button({ url: '/keystone/enquiries/' + registration.id, label: 'Open Keystone' })

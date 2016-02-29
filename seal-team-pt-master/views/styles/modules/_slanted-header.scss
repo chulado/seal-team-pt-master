@@ -1,0 +1,15 @@
+.slanted-header {
+  background: url("/images/slanted-header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3.5% 0 4.5% 0;
+
+  .container {
+    max-width: 800px;
+    color: white;
+    text-align: center;
+
+    h4 { color: $brand-yellow; }
+  } 
+}
