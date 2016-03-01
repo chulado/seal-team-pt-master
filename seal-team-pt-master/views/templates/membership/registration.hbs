@@ -45,18 +45,19 @@
 				{{/if}}
 				<!--<h2>Join today &amp; get the first month for free.*</h2>-->
 				
-				<h2>Sign up for the 2 week boot camp.</h2> 
+				<h2>Sign up for the 2 week boot camp</h2> 
 			
 				
-				<p>Your first month of membership will be prorated based upon the day you join. Monthly membership dues will start on the first of the month.</p>
+				<p>The 2 week boot camp consists of 10 days of intense, effective and fun training. Upon successful completion of the 2 week program you will be eligible for a SEAL Team Physical Training Membership.</p>
 				
 				<p>A portion of every new membership is donated to the <a href="http://www.navysealfoundation.org/" target="blank">Navy SEAL Foundation</a>. To date, <strong>we have donated over $24,000</strong> in support of the Naval Special Warfare Community and its families. </p>
-
+				
 				<!--
 				<small>*Requires a 6 or 12 month membership. Offer expires February 1, 2016. No coupon code needed. </small>
 			-->
 				
 				<p>&nbsp;</p>
+
 
 				<p class="lead">Choose your location</p>
 				
@@ -70,8 +71,8 @@
 						<td></td>
 						<td>Location</td>
 						<td style="width:20%">Regular</td>
-						<td style="width:20%">Professional</td>
-						<td style="width:20%">Student</td>
+						<td style="width:20%">Professional*</td>
+						<td style="width:20%">Student**</td>
 					</tr>
 					{{#each locations}}
 						<tr>
@@ -84,6 +85,12 @@
 					{{/each}}
 				</table>
 				<br>
+				<small style="font-size: 12px">*Professional: military and first responders.
+				**Student: full-time student at least 15 years of age.	
+				</small>
+				<br>
+				<br>
+
 
 				<div class="form-group {{#if validationErrors.membershipType}}has-error{{/if}}">
 					<label for="name">Choose Membership Type</label>
@@ -210,7 +217,7 @@
 		{{#ifeq step "three"}}
 			<h2>Almost Finished!</h2>
 
-			<p>A registration fee of ${{dueToday}} is due today. After your payment is made you will receive an email containing a link that you can use to print your <a href="/join/agreement/{{registration.id}}" target="_blank">signed membership agreement</a>.
+			<p>A total of ${{dueToday}} is due today. After your payment is made you will receive an email containing a link that you can use to print your <a href="/join/agreement/{{registration.id}}" target="_blank">signed agreement</a>.
 <!--
 			as well as instructions for completing a <a href="https://rightsignature.com/forms/Waiver7may2013-8826b4/token/40eba9eb163" target="_blank">participation waiver</a>.--></p>
 
@@ -223,7 +230,7 @@
 			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 			    data-key="pk_live_hHfbwdmQRoqDe6nokMB33Ih2"
 			    data-image="//sealteampt.com/images/logo2.png"
-			    data-name="Seal Team Physical Training"
+			    data-name="SEAL Team Physical Training"
 			    data-description="New Member Registration Fee"
 			    data-amount="{{stripeAmount}}">
 			  </script>
