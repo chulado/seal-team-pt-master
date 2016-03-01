@@ -2,7 +2,7 @@ extends /layouts/default
 
 block body-contents
   h1 Hi #{registration.name.first} #{registration.name.last},
-  p.text-larger Thanks for becomming a member of SEAL Team Physical Training!
+  p.text-larger Thanks for becoming a member of SEAL Team Physical Training!
   p &nbsp;
   p
     | This email is to serve as confirmation of your registration for the 2 Week Boot Camp. You will receive a separate email which serves as your credit card receipt.
@@ -15,15 +15,19 @@ block body-contents
   +button({ url: "http://sealteampt.com/join/agreement/" + registration.id, label: "View Signed Agreement" })
   br
   +button({ url: 'https://rightsignature.com/forms/Waiver7may2013-8826b4/token/40eba9eb163', label: 'Participation Waiver' })
+ 
   p &nbsp;
   h4 Important Information
+  
   p
     | On your first day of boot camp, report to the location you selected during registration.
+  
   p &nbsp;
 
   p
     | Show up early and check in with the lead instructor. Be hydrated and ready to go.  Wear running shoes and comfortable workout clothing.  Gloves are a good idea, but not required.
-    p &nbsp;  
+    
+  p &nbsp;  
 
   p
     | Richmond - 5:45am, 9:30am, or 6:00pm
@@ -51,10 +55,20 @@ block body-contents
     br 
     | Day 1: Meet at Darden Towe Park
 
+    p &nbsp;
+
+  p
+    | Philadelphia - 5:45am
+    br 
+    | Day 1: Meet at MLK Drive
+
+    p &nbsp;
+
   p
     | If you have questions regarding your new membership, please reply to this email or call (804) 262-1894 between the hours of 9am -3pm (M-F).
 
   p &nbsp;
+
   p
     | Navy SEAL John McGuire
     br
