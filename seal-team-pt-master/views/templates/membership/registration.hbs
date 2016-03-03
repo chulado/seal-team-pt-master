@@ -1,11 +1,11 @@
-{{#contentFor "title"}}Join SEAL Team Physical Training - Virginia, DC, Philadelphia{{/contentFor}}
+{{#contentFor "title"}}2 Week Boot Camp - Virginia, Washington DC &amp; Philadelphia{{/contentFor}}
 {{#contentFor "meta"}}
-<meta name="description" content="Join SEAL Team Physical with locations in Richmond VA, Charlottesville VA, Washington DC and Philadelphia.">
-<meta property="og:title" content="SEAL Team Physical Training">
+<meta name="description" content="Sign up for the 2 week boot camp. Boot camp consists of 10 days of challenging and fun fitness training.">
+<meta property="og:title" content="2 Week Boot Camp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="http://sealteampt.com/join/register">
 <meta property="og:image" content="http://sealteampt.com/images/sm/fb.png">
-<meta property="og:description" content="Join SEAL Team Physical with locations in Richmond VA, Charlottesville VA, Washington DC and Philadelphia.">
+<meta property="og:description" content="Sign up for the 2 week boot camp. Boot camp consists of 10 days of challenging and fun fitness training.">
 {{/contentFor}}
 
 <div class="page-section page-section-light page-section-narrow first-thing">
@@ -48,7 +48,9 @@
 				<h2>Sign up for the 2 week boot camp</h2> 
 			
 				
-				<p>The 2 week boot camp consists of 10 days of challenging and fun training. Upon successful completion of the 2 week program you will be eligible for a SEAL Team Physical Training Membership.</p>
+				<p>The 2 week boot camp consists of 10 days of challenging and fun fitness training. Upon successful completion of the 2 week program you will be eligible for a SEAL Team Physical Training Membership.</p>
+
+				<p>The cost for the 2 Week Boot Camp is a one-time fee of $250. Upon completion of the boot camp, no other fees are due. Should you decide to join our training program during the month of March, the fee of $250 will be credited towards a one-year SEAL Team Physical Training Membership.</p>
 				
 				<p>A portion of every new membership is donated to the <a href="http://www.navysealfoundation.org/" target="blank">Navy SEAL Foundation</a>. To date, <strong>we have donated over $24,000</strong> in support of the Naval Special Warfare Community and its families. </p>
 				
@@ -59,7 +61,7 @@
 				<p>&nbsp;</p>
 
 
-				<p class="lead">Choose your location</p>
+				<p class="lead">Choose a Location</p>
 				
 				<table class="table">
 					<tr class="head-sub">
@@ -93,7 +95,7 @@
 
 
 				<div class="form-group {{#if validationErrors.membershipType}}has-error{{/if}}">
-					<label for="name">Choose Membership Type</label>
+					<label class="lead" for="name">Select a Registration Type</label>
 					<select name="membershipType" class="form-control">
 					{{#each membershipTypes}}
 						<option value="{{this._id}}" {{#ifeq formData.membershipType this._id}}selected{{/ifeq}}>{{this.name}}</option>
@@ -105,7 +107,7 @@
 				<hr>
 
 				<br>
-				<p class="lead">Personal information</p>
+				<p class="lead">Personal Information</p>
 
 				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 					<label for="name">Full Name</label>
@@ -168,7 +170,7 @@
 				</div>
 				</div>
 				<hr>
-				<p class="lead">Experience SEAL Team Physical Training with a buddy</p>
+				<p class="lead">Experience SEAL Team Physical Training with a Buddy</p>
 				<p>When someone you refer becomes a member, we'll give you <strong>one free month</strong> of membership.</p>
 				<div class="form-group {{#if validationErrors.nameReferral}}has-error{{/if}}">
 					<label for="nameReferral">Your Friend's Name</label>
