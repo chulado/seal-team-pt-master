@@ -48,12 +48,12 @@ h5 { }
 
 p, .list {
   font-size: 18px;
-  color: #595959;
+  color: #444;
 }
 
 .lead {
-  color: $gray-light;
-  font-weight: 500;
+  color: #444;
+  font-weight: 400;
   @include responsive-font-size(30);
   line-height: 1.1em;
 }

@@ -19,7 +19,7 @@
 
   .navbar-nav {
     > li {
-      padding: 0 .5%;
+      padding: 0 .2%;
 
       > a {
         font-family: $font-family-large-type;
@@ -112,8 +112,9 @@
     padding-left: 0!important;
     margin-left: 0!important; 
 }
+
   @media(max-width: $screen-sm) {
-    .phone {
+    .sm {
       visibility: hidden;
       }
     }
