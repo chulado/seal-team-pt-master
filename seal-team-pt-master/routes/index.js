@@ -296,6 +296,7 @@ exports = module.exports = function(app) {
 	app.get("/public_html_2012/index.php/news.html", function(req, res) { res.redirect(301, "http://sealteampt.com/news"); })
 	app.get("/public_html_2012/index.php/about/instructors/category/20-scott-donald.html", function(req, res) { res.redirect(301, "http://sealteampt.com/news"); })
 	app.get("/public_html_2012/index.php/about/instructors/category/21-jeff-elgin.html", function(req, res) { res.redirect(301, "http://sealteampt.com/news"); })
+	app.get("/programs/motivational-speaking", function(req, res) { res.redirect(301, "http://navysealjohnmcguire.com"); })
 	
 
 
