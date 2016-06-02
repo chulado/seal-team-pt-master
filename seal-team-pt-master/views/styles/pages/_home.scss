@@ -19,7 +19,9 @@
     max-height: 90px;
   }
 }
-
+.our-locations {
+  font-size: 18px;
+}
 @media(max-width: $screen-sm) {
   .our-locations {
     display: none;
