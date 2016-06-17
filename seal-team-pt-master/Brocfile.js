@@ -26,7 +26,9 @@ var trees = {
   
   css: [
     "owl.carousel/dist/assets/owl.carousel.css",
-    "owl.carousel/dist/assets/owl.theme.default.css"
+    "owl.carousel/dist/assets/owl.theme.default.css",
+    "appkit/countdown.js",
+    "appkit/scripts.js"
   ]
  
 }
