@@ -52,9 +52,9 @@ Registration.schema.methods.sendNotificationEmail = function(callback) {
       to: admins,
       from: {
         name: 'SEAL Team Physical Training',
-        email: 'admin@sealteampt.com'
+        email: 'spttmailbox@gmail.com'
       },
-      subject: 'New Registration for SEAL Team Physical Training',
+      subject: 'New Bootcamp Registration',
       registration: enqiury
     }, function(){
       if(callback) callback.apply(this, arguments);

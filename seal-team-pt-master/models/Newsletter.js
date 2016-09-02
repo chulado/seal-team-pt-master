@@ -38,9 +38,9 @@ Newsletter.schema.methods.sendNotificationEmail = function(callback) {
       to: admins,
       from: {
         name: 'SEAL Team Physical Training',
-        email: 'admin@sealteampt.com'
+        email: 'spttmailbox@gmail.com'
       },
-      subject: 'New Newsletter Signup for SEAL Team Physical Training',
+      subject: 'Newsletter Subscription',
       enquiry: enqiury
     }, function(){
       if(callback) callback.apply(this, arguments);
