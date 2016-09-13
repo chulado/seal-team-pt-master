@@ -56,7 +56,6 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 				email: 'spttmailbox@gmail.com'
 				//email: 'admin@sealteampt.com'
 			},
-			'x-mailgun-native-send': true,
 			subject: 'New Enquiry for SEAL Team Physical Training',
 			enquiry: enqiury
 		}, callback);
