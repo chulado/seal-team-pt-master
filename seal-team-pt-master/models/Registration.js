@@ -19,10 +19,13 @@ Registration.add({
   state: { type: Types.Select, options: require("../lib/states"), required: true, emptyOption: false },
   zip: { type: String, required: true },
   phone: { type: String, required: true },
+ /* leave off 2/2017
   birthday: { type: Types.Date, required: true },
+  */
   location: { type: Types.Relationship, ref: 'Location', many: false, required: true },
   contractLength: { type: String },
   tshirt: { type: String },
+  couponCode: { type: String, required: false },
   nameReferral: { type: Types.Name, required: false },
   telephoneReferral: { type: String, required: false },
   emailReferral: { type: String, required: false },

@@ -45,7 +45,7 @@ exports = module.exports = function(req, res) {
       
     updater.process(req.body, {
       flashErrors: true,
-      fields: 'name, email, phone, address, city, state, zip, birthday, location, contractLength, membershipType, tshirt, nameReferral, telephoneReferral, emailReferral, nameReferredBy',
+     fields: 'name, email, phone, address, city, state, zip, location, contractLength, membershipType, tshirt, couponCode, nameReferral, telephoneReferral, emailReferral, nameReferredBy',
       errorMessage: 'There was a problem submitting your registration:'
     }, function(err) {
       console.log('err', err);

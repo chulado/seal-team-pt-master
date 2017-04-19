@@ -7,7 +7,7 @@
   <div class="container">
     <h1>Athletic Team Building</h1>
 	<h2>A Better Product On And Off The Field</h2>
-    <p class="lead">Get more information on our athletic team building program.</p>
+    
   </div>
 </div>
 
@@ -24,26 +24,96 @@
 
 				{{else}}
 					<form method="post">
+						<p class="lead">Request more information on our athletic team building program.</p>
+						<br><br>
 						<input type="hidden" name="action" value="contact">
 						<input type="hidden" name="enquiryType" value="athletic-training">
 						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-							<label>Name</label>
+							<label>Contact Name</label>
 							<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
 						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Title</label>
+							<input type="text" name="title"  class="form-control" value="{{formData.title}}">
+						</div>
+						
+						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+							<label>Contact Email</label>
+							<input type="email" name="email" class="form-control" value="{{formData.email}}">
+						</div>
+						<div class="form-group">
+							<label>Contact Phone</label>
+							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>School/Team Name</label>
+							<input type="text" name="team"  class="form-control" value="{{formData.[team]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Location of Training</label>
+							<input type="text" name="location.training"  class="form-control" value="{{formData.[location.training]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Proposed Date of Training</label>
+							<input type="text" name="training.date"  class="form-control" value="{{formData.[training.date]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Duration of Training</label>
+							<input type="text" name="duration"  class="form-control" value="{{formData.[duration]}}">
+						</div>
+
 						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>School/Team Name</label>
 							<input type="text" name="team.name"  class="form-control" value="{{formData.[team.name]}}">
 						</div>
-						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-							<label>Email</label>
-							<input type="email" name="email" class="form-control" value="{{formData.email}}">
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Sport</label>
+							<input type="text" name="sport"  class="form-control" value="{{formData.[sport]}}">
 						</div>
-						<div class="form-group">
-							<label>Phone</label>
-							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Division</label>
+							<input type="text" name="division"  class="form-control" value="{{formData.[division]}}">
 						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>League/Conference</label>
+							<input type="text" name="league.conference"  class="form-control" value="{{formData.[league.conference]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>No. of Players or Participants</label>
+							<input type="text" name="players.number"  class="form-control" value="{{formData.[players.number]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Age Range of Players</label>
+							<input type="text" name="age.range"  class="form-control" value="{{formData.[age.range]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Gender of Team</label>
+							<input type="text" name="team.gender"  class="form-control" value="{{formData.[team.gender]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Expected Budget</label>
+							<input type="text" name="budget"  class="form-control" value="{{formData.[budget]}}">
+						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>How did You Hear About Us?</label>
+							<input type="text" name="referral"  class="form-control" value="{{formData.[referral]}}">
+						</div>
+
 						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-							<label>Message</label>
+							<label>Training Goals</label>
 							<textarea name="message" placeholder="Tell us about your school or team..." rows="4" class="form-control">{{formData.message}}</textarea>
 						</div>
 						<div class="form-actions">

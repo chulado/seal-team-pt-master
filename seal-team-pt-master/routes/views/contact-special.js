@@ -22,7 +22,7 @@ exports = module.exports = function(templateName) {
 			
 			updater.process(req.body, {
 				flashErrors: true,
-				fields: 'name, email, phone, enquiryType, message',
+				fields: 'name, title, email, phone, enquiryType, message',
 				errorMessage: 'There was a problem submitting your enquiry:'
 			}, function(err) {
 				if (err) {

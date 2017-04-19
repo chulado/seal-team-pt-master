@@ -19,7 +19,7 @@ var trees = {
       "jquery/dist/jquery.js",
       "bootstrap-sass/js/transition.js",
       "bootstrap-sass/js/dropdown.js",
-      "bootstrap-sass/js/collapse.js",
+      "bootstrap-sass/js/modal.js",
       "owl.carousel/dist/owl.carousel.js"
     ],
   },

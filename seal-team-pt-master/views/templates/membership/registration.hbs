@@ -12,7 +12,8 @@
   <div class="container">
     <h1>2 Week Boot Camp</h1>
     <h1 style="font-size:55px">Basic Fitness Training</h1>
-	<h2>Next boot camp class begins January 9th.</h2>
+    
+	<h2>Next boot camp class begins May 1st.</h2>
 
   </div>
 </div>
@@ -73,13 +74,20 @@
 				{{/if}}
 				<!--<h2>Join today &amp; get the first month for free.*</h2>-->
 				
+
 				<p class="lead">The 2 week boot camp consists of 10 days of challenging and fun fitness training.
 				</p>
 
 				<p> Upon successful completion of the 2 week boot camp, you will be eligible to join SEAL Team Physical Training as a fitness member, at an affordable monthly rate.</p>
 
-				<p>The cost for the 2 Week Boot Camp is a one-time fee of $250 (discounts are offered for students and professionals). <!--Should you decide to join our 12 month training program after successful completion of the boot camp, the <strong>boot camp registration fee will be refunded.-->
-				<strong></p>
+				<!--<p>The cost for the 2 Week Boot Camp is a one-time fee of $250 (discounts are offered for students and professionals).</p>
+
+				<p>SEAL Team Physical Training will make a <strong>donation of $125 to the Make-a-Wish Foundation</strong> for each (regular priced) boot camp class purchased by March 6th.</p> 
+
+				<img src="/images/maw-logo.png" alt="Make-A-Wish Foundation logo">-->
+
+					<!--Should you decide to join our 12 month training program after successful completion of the boot camp, the <strong>boot camp registration fee will be refunded.-->
+				
 				
 				<!--<p>A portion of every new membership is donated to the <a href="http://www.navysealfoundation.org/" target="blank">Navy SEAL Foundation</a>. To date, <strong>we have donated over $24,000</strong> in support of the Naval Special Warfare Community and its families. </p>-->
 				
@@ -100,10 +108,10 @@
 					</tr>
 					<tr class="head-sub">
 						<td></td>
-						<td>Location</td>
-						<td style="width:20%">Regular</td>
-						<td style="width:20%">Professional*</td>
-						<td style="width:20%">Student**</td>
+						<td style="width:33%">&nbsp;</td>
+						<td style="width:33%">Boot Camp</td>
+						
+						<td style="width:33%">Boot Camp Student*</td>
 					</tr>
 					{{#each locations}}
 						<tr>
@@ -111,13 +119,13 @@
 							<td>{{name}}</td>
 							<td>${{price.oneMonth}}</td>
 							<td>${{price.sixMonths}}</td>
-							<td>${{price.twelveMonths}}</td>
+							
 						</tr>
 					{{/each}}
 				</table>
 				<br>
-				<small style="font-size: 12px">*Professional: military and first responders.
-				**Student: full-time student at least 15 years of age.	
+				<small style="font-size: 12px">
+				*<strong>Full-time student at least 15 years of age.</strong>	
 				</small>
 				<br>
 				<br>
@@ -150,10 +158,12 @@
 					<label for="phone">Phone</label>
 					<input type="tel" name="phone" class="form-control" value="{{formData.phone}}">
 				</div>
+				<!-- UGLY webkit form controls suck
 				<div class="form-group {{#if validationErrors.birthday}}has-error{{/if}}">
 					<label for="birthday">Date of Birth &nbsp;mm/dd/yyyy</label>
 					<input type="date" name="birthday" class="form-control" value="{{formData.birthday}}">
 				</div>
+			-->
 					<div class="form-group {{#if validationErrors.nameReferredBy}}has-error{{/if}}">
 					<label for="nameReferredBy">Name of Person Who Referred You to Our Program</label>
 					<input type="text" name="nameReferredBy"  class="form-control" value="{{formData.nameReferredBy}}">
@@ -199,8 +209,18 @@
 				</div>
 				</div>
 				<hr>
+
+				<p class="lead">Promotional Code</p>
+				<p>If you have a promotional code, please enter it below.
+				
+				<div class="form-group {{#if validationErrors.couponCode}}has-error{{/if}}">
+					<label for="couponCode">Code</label>
+					<input type="text" name="couponCode"  class="form-control" value="{{formData.couponCode}}">
+				</div>
+				<hr>
+				<br>
 				<p class="lead">Experience SEAL Team Physical Training with a Buddy</p>
-				<p>When someone you refer becomes a member, we'll give you <strong>one free month</strong> of membership.</p>
+				<p>When someone you refer becomes an annual member, we'll give you <strong>one free month</strong> of membership.</p>
 				<div class="form-group {{#if validationErrors.nameReferral}}has-error{{/if}}">
 					<label for="nameReferral">Your Friend's Name</label>
 					<input type="text" name="nameReferral"  class="form-control" value="{{formData.nameReferral}}">
