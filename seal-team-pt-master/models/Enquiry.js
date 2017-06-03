@@ -20,7 +20,6 @@ Enquiry.add({
 		{ value: 'question', label: "I've got a question" },
 		{ value: 'media-request', label: "Media request" },
 		{ value: "seal-team-training", label: "SEAL Team Physical Training" },
-		{ value: "athletic-teams", label: "Athletic Teams" },
 		{ value: "speaking", label: "Motivational speaking" },
 		{ value: "corporate-training", label: "Corporate Team Training" },
 		{ value: "kids-program", label: "Fitness Classes for Kids" },
