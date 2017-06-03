@@ -31,6 +31,11 @@
 							<label>Contact Name</label>
 							<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
 						</div>
+
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<label>Title</label>
+							<input type="text" name="title"  class="form-control" value="{{formData.title}}">
+						</div>
 						
 						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
 							<label>Contact Email</label>
@@ -41,62 +46,62 @@
 							<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.team}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>School/Team Name</label>
 							<input type="text" name="team"  class="form-control" value="{{formData.team}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.location}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Location of Training</label>
 							<input type="text" name="location"  class="form-control" value="{{formData.location}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.dates}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Proposed Date of Training</label>
 							<input type="text" name="dates"  class="form-control" value="{{formData.dates}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.duration}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Duration of Training</label>
 							<input type="text" name="duration"  class="form-control" value="{{formData.duration}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.sport}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Sport</label>
 							<input type="text" name="sport"  class="form-control" value="{{formData.sport}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.division}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Division</label>
 							<input type="text" name="division"  class="form-control" value="{{formData.division}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.conference}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>League/Conference</label>
 							<input type="text" name="conference"  class="form-control" value="{{formData.conference}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.participants}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>No. of Players or Participants</label>
 							<input type="text" name="participants"  class="form-control" value="{{formData.participants}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.age}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Age Range of Players</label>
 							<input type="text" name="age"  class="form-control" value="{{formData.age}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.gender}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Gender of Team</label>
 							<input type="text" name="gender"  class="form-control" value="{{formData.gender}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.budget}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>Expected Budget</label>
 							<input type="text" name="budget"  class="form-control" value="{{formData.budget}}">
 						</div>
 
-						<div class="form-group {{#if validationErrors.referral}}has-error{{/if}}">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 							<label>How did You Hear About Us?</label>
 							<input type="text" name="referral"  class="form-control" value="{{formData.referral}}">
 						</div>

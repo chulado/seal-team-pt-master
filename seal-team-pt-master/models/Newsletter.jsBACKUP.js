@@ -35,10 +35,10 @@ Newsletter.schema.methods.sendNotificationEmail = function(callback) {
     if (err) return callback(err);
     
     new keystone.Email('newsletter-notification').send({
-      to:admins,
+      to: admins,
       from: {
         name: 'SEAL Team Physical Training',
-        email: ''
+        email: 'spttmailbox@gmail.com'
       },
       subject: 'Newsletter Subscription',
       enquiry: enqiury

@@ -1,5 +1,5 @@
 var keystone = require('keystone'),
-	Enquiry = keystone.list('Enquiry');
+	TeamTraining = keystone.list('TeamTraining');
 
 exports = module.exports = function(templateName) {
 	return function(req, res) {
@@ -9,7 +9,6 @@ exports = module.exports = function(templateName) {
 		
 		// Set locals
 		locals.section = 'contact';
-		locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 		locals.formData = req.body || {};
 		locals.validationErrors = {};
 		locals.enquirySubmitted = false;
@@ -17,12 +16,12 @@ exports = module.exports = function(templateName) {
 		// On POST requests, add the Enquiry item to the database
 		view.on('post', { action: 'contact' }, function(next) {
 			
-			var newEnquiry = new Enquiry.model(),
-				updater = newEnquiry.getUpdateHandler(req);
+			var newTeamTraining = new TeamTraining.model(),
+				updater = newTeamTraining.getUpdateHandler(req);
 			
 			updater.process(req.body, {
 				flashErrors: true,
-				fields: 'name, email, phone, enquiryType, message',
+				fields: 'name, email, phone, team, location, dates, duration, sport, division, conference, participants, age, gender, budget, referral, message',
 				errorMessage: 'There was a problem submitting your enquiry:'
 			}, function(err) {
 				if (err) {

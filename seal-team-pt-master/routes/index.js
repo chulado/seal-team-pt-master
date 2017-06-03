@@ -320,7 +320,7 @@ exports = module.exports = function(app) {
 	app.get("/programs/kids", staticPage("programs/kids"));
 	app.all("/programs/contact-speaker", routes.views["contact-special"].call(this, "programs/contact-speaker"));
 	app.all("/programs/contact-corporate-training", routes.views["contact-special"].call(this, "programs/contact-corporate-training"));
-	app.all("/programs/contact-athletic-training", routes.views["contact-special"].call(this, "programs/contact-athletic-training"));
+	app.all("/programs/contact-athletic-training", routes.views["contact-teams"].call(this, "programs/contact-athletic-training"));
 	app.all("/programs/contact-kids-program", routes.views["contact-special"].call(this, "programs/contact-kids-program"));
 
 	app.get("/old-path", function(req, res) { res.redirect(301, "http://sealteampt.com/new-path"); }); 
@@ -332,7 +332,7 @@ exports = module.exports = function(app) {
 	app.get("/faqs", staticPage("faqs"));
 
 	app.get("/api/twitter", routes.api.twitter);
-	app.post("/api/newsletter/subscribe", routes.views.newsletter);
+	//app.post("/api/newsletter/subscribe", routes.views.newsletter);//
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

@@ -24,7 +24,6 @@
         <li>{{#link-to "/join/register" request=request}}Join{{/link-to}}</li>
 		<li>{{#link-to "/trial" request=request}}Free Class{{/link-to}}</li>
 	    <li>{{#link-to "/faqs" request=request}}FAQs{{/link-to}}</li>
-		<li><a href="http://www.sealteamptmembers.com/Menu/MemberRegistration/MemberSignIn" target="blank">Member Login</a></li>
 
       </ul>
     </div>
@@ -39,19 +38,20 @@
 -->
   </div>
   <div class="page-section-centered centered">
-    <form method="post" action="/api/newsletter/subscribe" id="newsletter-subscribe" class="form form-horizontal">
-      <input type="text" name="email" placeholder="Email" class="form-control">
+  <form action="//sealteampt.us15.list-manage.com/subscribe/post?u=0123ee119c0a76a989bb5d208&amp;id=4d141cbb15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form form-horizontal" target="_blank" novalidate>
+    
+      <input type="email" name="EMAIL" placeholder="Email" class="form-control required email" id="mce-EMAIL">
       <button type="submit" class="btn btn-primary" style="margin-top:9px; padding-top:5px; padding-right:12px; padding-bottom:5px; padding-left:12px">Subscribe to our Newsletter</button>
     </form>
   </div>
   <div class="container page-section-centered centered">
   <p>&nbsp;</p>
   
-    <p class="credits">&copy; {{date format='YYYY'}} SEAL Team Physical Training, Inc. All Rights Reserved.<br>
-      804-262-1894</p> 
-      <p><a href="https://rightsignature.com/forms/Fitness-Intake-Fo-d89fda/token/ff56efcb760" target="blank"><span class="credits">Participation Waiver</span></a> | <a href="http://www.sealteamptmembers.com/Menu/MemberRegistration/MemberSignIn" target="blank"> Member Login</a> <br>
+    <p class="credits">&copy; {{date format='YYYY'}} SEAL Team Physical Training, Inc. 804-262-1894
+      <br>
+      <a href="https://rightsignature.com/forms/Fitness-Intake-Fo-d89fda/token/ff56efcb760" target="blank"><span class="credits">Participation Waiver</span></a> | <a href="https://clients.mindbodyonline.com/classic/ws?studioid=883222&stype=-98" target="blank">Member Login</a><br>
     {{#ifeq request.path "/"}}
-      <a href="https://chulado.com/" target="blank"><span class="credits">Made by Chulado</span></a></p>
+      <a href="https://chulado.com/" target="blank">Made by Chulado</a></p>
     {{/ifeq}}
   </div>
 </div>
