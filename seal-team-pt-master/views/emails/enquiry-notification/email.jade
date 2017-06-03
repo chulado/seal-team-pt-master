@@ -14,10 +14,48 @@ block body-contents
         | )
   if enquiry.phone
     p.text-larger Phone: #{enquiry.phone}
+
+  if enquiry.team
+    p.text-larger Team: #{enquiry.team}
+
+  if enquiry.location
+    p.text-larger Training Location: #{enquiry.location}
+
+  if enquiry.dates
+    p.text-larger Training Dates: #{enquiry.dates}  
+
+  if enquiry.duration
+    p.text-larger Duration of Training: #{enquiry.duration} 
+
+  if enquiry.sport
+    p.text-larger Sport: #{enquiry.sport}    
+
+  if enquiry.division
+    p.text-larger Division: #{enquiry.division} 
+
+  if enquiry.conference
+    p.text-larger Conference: #{enquiry.conference}  
+
+  if enquiry.participants
+    p.text-larger Participants: #{enquiry.participants}  
+
+  if enquiry.age
+    p.text-larger Age Range of Players: #{enquiry.age} 
+
+  if enquiry.gender
+    p.text-larger Gender of Players: #{enquiry.gender} 
+
+  if enquiry.budget
+    p.text-larger Estimated Budget: #{enquiry.budget}  
+
+  if enquiry.referral
+    p.text-larger Referred By: #{enquiry.referral}              
+              
+
   if enquiry.enquiryType
     p.text-larger #{enquiry._.enquiryType.format()}
   if enquiry.message
-    .text-larger !{enquiry.message.html}
+    p.text-larger Training Goals: !{enquiry.message.html}
   p.text-muted Sent #{enquiry._.createdAt.format()}
   p &nbsp;
   +button({ url: '/keystone/enquiries/' + enquiry.id, label: 'Open Keystone' })
