@@ -49,13 +49,18 @@ block body-contents
     p.text-larger Estimated Budget: #{enquiry.budget}  
 
   if enquiry.referral
-    p.text-larger Referred By: #{enquiry.referral}              
-              
+    p.text-larger Referred By: #{enquiry.referral}    
 
+   if enquiry.enquiryType
+    p.text-larger #{enquiry._.enquiryType.format()}
+  if enquiry.goals
+    p.text-larger Training Goals: !{enquiry.goals.html}             
+              
   if enquiry.enquiryType
     p.text-larger #{enquiry._.enquiryType.format()}
   if enquiry.message
-    p.text-larger Training Goals: !{enquiry.message.html}
+    p.text-larger Message: !{enquiry.message.html}
+    
   p.text-muted Sent #{enquiry._.createdAt.format()}
   p &nbsp;
   +button({ url: '/keystone/enquiries/' + enquiry.id, label: 'Open Keystone' })

@@ -27,7 +27,7 @@ TeamTraining.add({
 	gender: { type: String, required: true },
 	budget: { type: String, required: true },
 	referral: { type: String, required: true },
-	message: { type: Types.Markdown, required: true },
+	goals: { type: Types.Markdown, required: true },
 	createdAt: { type: Date, default: Date.now }
 });
 
