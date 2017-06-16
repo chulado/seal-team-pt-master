@@ -51,9 +51,7 @@ block body-contents
   if enquiry.referral
     p.text-larger Referred By: #{enquiry.referral}    
 
-   if enquiry.enquiryType
-    p.text-larger #{enquiry._.enquiryType.format()}
-  if enquiry.goals
+   if enquiry.goals
     p.text-larger Training Goals: !{enquiry.goals.html}             
               
   if enquiry.enquiryType
