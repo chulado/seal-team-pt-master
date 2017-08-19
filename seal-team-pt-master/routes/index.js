@@ -359,7 +359,7 @@ exports = module.exports = function(app) {
 	app.all("/programs/contact-speaker", routes.views["contact-special"].call(this, "programs/contact-speaker"));
 	app.all("/programs/contact-corporate-training", routes.views["contact-special"].call(this, "programs/contact-corporate-training"));
 	app.all("/programs/contact-athletic-training", routes.views["contact-teams"].call(this, "programs/contact-athletic-training"));
-	app.all("/programs/contact-kids-program", routes.views["contact-kids"].call(this, "programs/contact-kids-program"));
+	app.all("/programs/contact-kids-program", routes.views["contact-special"].call(this, "programs/contact-kids-program"));
 
 	app.get("/old-path", function(req, res) { res.redirect(301, "http://sealteampt.com/new-path"); }); 
 	
