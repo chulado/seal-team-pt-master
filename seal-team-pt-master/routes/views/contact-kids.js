@@ -17,7 +17,7 @@ exports = module.exports = function(templateName) {
 		view.on('post', { action: 'contact' }, function(next) {
 			
 			var newKids = new Kids.model(),
-				updater = newCorporate.getUpdateHandler(req);
+				updater = newKids.getUpdateHandler(req);
 			
 			updater.process(req.body, {
 				flashErrors: true,
