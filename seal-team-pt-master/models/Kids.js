@@ -2,16 +2,16 @@ var keystone = require('keystone'),
 	Types = keystone.Field.Types;
 
 /**
- * Corporate Model
+ * Kids Model
  * =============
  */
 
-var Corporate = new keystone.List('Corporate', {
+var Kids = new keystone.List('Kids', {
 	nocreate: true,
 	noedit: true
 });
 
-Corporate.add({
+Kids.add({
 	name: { type: Types.Name, required: true },
 	company: { type: String, required: true },
 	email: { type: Types.Email, required: true },
@@ -20,18 +20,18 @@ Corporate.add({
 	createdAt: { type: Date, default: Date.now }
 });
 
-Corporate.schema.pre('save', function(next) {
+Kids.schema.pre('save', function(next) {
 	this.wasNew = this.isNew;
 	next();
 })
 
-Corporate.schema.post('save', function() {
+Kids.schema.post('save', function() {
 	if (this.wasNew) {
 		this.sendNotificationEmail();
 	}
 });
 
-Corporate.schema.methods.sendNotificationEmail = function(callback) {
+Kids.schema.methods.sendNotificationEmail = function(callback) {
 	
 	var enquiry = this;
 	
@@ -46,7 +46,7 @@ Corporate.schema.methods.sendNotificationEmail = function(callback) {
 				email: 'spttmailbox@gmail.com'
 				//email: 'admin@sealteampt.com'
 			},
-			subject: 'Corporate Team Building',
+			subject: 'Programs for Kids',
 			enquiry: enquiry
 		}, callback);
 		
@@ -54,6 +54,6 @@ Corporate.schema.methods.sendNotificationEmail = function(callback) {
 	
 }
 
-Corporate.defaultSort = '-createdAt';
-Corporate.defaultColumns = 'name, email, createdAt';
-Corporate.register();
+Kids.defaultSort = '-createdAt';
+Kids.defaultColumns = 'name, email, createdAt';
+Kids.register();
