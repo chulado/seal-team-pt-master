@@ -13,7 +13,6 @@ var Kids = new keystone.List('Kids', {
 
 Kids.add({
 	name: { type: Types.Name, required: true },
-	company: { type: String, required: true },
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
 	message: { type: Types.Markdown, required: true },
