@@ -337,7 +337,7 @@ exports = module.exports = function(app) {
 	app.get("/index.php/component/k2/item/14-john_cnn", function(req, res) { res.redirect(301, "http://sealteampt.com/news"); })	
 	app.get("/index.php/component/k2/item/3-stpt-vcu", function(req, res) { res.redirect(301, "http://sealteampt.com/news"); })	
 	app.get("/index.php/news/22-2011-winter-incentive-program.html", function(req, res) { res.redirect(301, "/"); })	
-	app.get("/index.php/about/instructors/category/15-deane-cheatham", function(req, res) { res.redirect(301, "http://sealteampt.com/join""); })
+	app.get("/index.php/about/instructors/category/15-deane-cheatham", function(req, res) { res.redirect(301, "http://sealteampt.com/join"); })
 
 	// Views
 	app.get('/', routes.views.index);
