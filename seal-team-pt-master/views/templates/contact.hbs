@@ -23,42 +23,23 @@
 		<h2>All great things begin with a conversation. Let's get things started. <!--Come visit us at HQ or contact us below.--></h2>
 	</div>
 </div>
-<!-- Hide 11/5/15
-<div class="page-section page-section-dark slanted-blocks slanted-blocks-double slanted-blocks-darklinks">
-  <div class="container">
-    <div class="slanted-blocks-row">
-      {{#link-to "https://goo.gl/maps/2fHq1JMQWP92" target="blank" class="slanted-blocks-col"}}
-        <div class='slanted-blocks-col-inner' style="background-image: url({{{styleizedImage2 "stpt_map_izdree"}}});">
-          <i class="icon icon-marker-1"></i>
-          <div class="slanted-cta">Navigation</div>
-        </div>
-      {{/link-to}}
-      {{#link-to "https://www.google.com/maps/place/SEAL+Team+Physical+Training,+Inc./@37.6455394,-77.5820803,3a,75y,90.76h,90t/data=!3m5!1e1!3m3!1smvjDwyuIkoUAAAGuwwy1hQ!2e0!3e2!4m2!3m1!1s0x0:0xdfcb2e453c0c44a7!6m1!1e1" target="blank" class="slanted-blocks-col"}}
-        <div class='slanted-blocks-col-inner' style="background-image: url({{{styleizedImage2 "stpt_office_nxfxut"}}});">
-          <i class="icon icon-binocular"></i>
-          <div class="slanted-cta">HQ Tour</div>
-        </div>
-      {{/link-to}}
-    </div>
-  </div>
-</div> -->
+
 
 <div class="page-section page-section-light" id="form">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-7">
-				<h3>Send a message</h3>
-				<p><strong>To inquire about Athletic Team Building, <a href="/programs/contact-athletic-training">please do so here</strong></a>.</p>
 				{{#if enquirySubmitted}}
-					<p>Thanks for getting in touch. You can expect to hear from us soon.</p>
-					<p>&nbsp;</p>
-					<p>&nbsp;</p>
-					<p>&nbsp;</p>
+				<br><br>
+					<h4>Thanks for getting in touch. You can expect to hear from us soon.</h4>
 				{{else}}
+				<h3>Send a message</h3>
 				
 
-				<form method="post" action="#form">
-					<input type="hidden" name="action" value="contact">
+				<p><strong>To inquire about Athletic Team Building, <a href="/programs/contact-athletic-training">please do so here</strong></a>.</p>
+
+<form method="post" action="#form">
+<input type="hidden" name="action" value="contact">
 					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 						<label>Name</label>
 						<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
