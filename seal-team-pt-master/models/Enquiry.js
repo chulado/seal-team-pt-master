@@ -52,8 +52,8 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 			to: admins,
 			from: {
 				name: 'SEAL Team Physical Training',
-				email: 'spttmailbox@gmail.com'
-				//email: 'admin@sealteampt.com'
+				//email: 'spttmailbox@gmail.com'
+				email: 'admin@sealteampt.com'
 			},
 			subject: 'New Enquiry for SEAL Team Physical Training',
 			enquiry: enqiury
