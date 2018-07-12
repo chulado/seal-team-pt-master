@@ -6,10 +6,10 @@ var cheerio = require("cheerio");
 var cloudinary = require('cloudinary');
 
 // Declare Constants
-var CLOUDINARY_HOST = '//res.cloudinary.com';
+var CLOUDINARY_HOST = 'https//res.cloudinary.com';
 
 // Collection of templates to interpolate
-var linkTemplate = _.template('<a href="<%= url %>"><%= text %></a>');
+var linkTemplate = _.template('<%= text %>'); //_.template('<a href="<%= url %>"><%= text %></a>');
 var scriptTemplate = _.template('<script src="<%= src %>"></script>');
 var cssLinkTemplate = _.template('<link href="<%= href %>" rel="stylesheet">');
 var cloudinaryUrlLimit = _.template(CLOUDINARY_HOST + '/<%= cloudinaryUser %>/image/upload/c_limit,f_auto,h_<%= height %>,w_<%= width %>/<%= publicId %>.jpg');
@@ -104,11 +104,27 @@ module.exports = function() {
 	};
 
 	// BLAh
-	_helpers.styleizedImage = function(imageId) {
+	_helpers.styleizedImage = function(imageId, width, height) {
+		if(!width) width = 500;
+		if(!height) height = 330;
+		
+		return cloudinary.url(imageId, {
+			transformation: [
+				{ width: width, height: height, crop: "fill" },
+				{ overlay: "purple_p12mc3", effect: "screen", opacity: 100, width: width, height: height },
+				{ overlay: "yellow_nltzn9", effect: "multiply", opacity: 15,  width: width, height: height }
+
+			]
+		});
+	}
+
+
+	_helpers.styleizedImage2 = function(imageId) {
 		return cloudinary.url(imageId, {
 			transformation: [
 				{ width: 500, height: 330, crop: "fill" },
 				{ overlay: "purple_p12mc3", effect: "screen", opacity: 100, width: 500, height: 330 },
+				{ overlay: "purple_p12mc3", effect: "multiply", opacity: 50, width: 500, height: 330 },
 				{ overlay: "yellow_nltzn9", effect: "multiply", opacity: 15,  width: 500, height: 330 }
 
 			]
@@ -153,7 +169,20 @@ module.exports = function() {
 		}
 		return new hbs.SafeString(output);
 	};
-	
+
+	_helpers.block = function (name) {
+    var blocks  = this._blocks,
+        content = blocks && blocks[name];
+
+    return content ? content.join('\n') : null;
+  };
+
+  _helpers.contentFor = function (name, options) {
+    var blocks = this._blocks || (this._blocks = {}),
+        block  = blocks[name] || (blocks[name] = []);
+
+    block.push(options.fn(this));
+  };
 	/* To Implement [Ghost Helpers](http://docs.ghost.org/themes/#helpers)
 	 * The [source](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/index.js)
 	 *
@@ -265,18 +294,18 @@ module.exports = function() {
 	
 	// Direct url link to a specific post
 	_helpers.postUrl = function(postSlug, options) {
-		return ('/blog/post/' + postSlug);
+		return ('/news/post/' + postSlug);
 	};
 	
 	// might be a ghost helper
 	// used for pagination urls on blog
 	_helpers.pageUrl = function(pageNumber, options) {
-		return '/blog?page=' + pageNumber;
+		return '/news?page=' + pageNumber;
 	};
 	
 	// create the category url for a blog-category page
 	_helpers.categoryUrl = function(categorySlug, options) {
-		return ('/blog/' + categorySlug);
+		return ('/news/' + categorySlug);
 	};
 	
 	// ### Pagination Helpers
