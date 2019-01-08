@@ -369,6 +369,9 @@ exports = module.exports = function(app) {
 	app.get("/join/agreement/:id", routes.views.agreement);
 
 	app.get("/faqs", staticPage("faqs"));
+	app.get("/challenge", staticPage("challenge")); //Stripe code 30 day challenge
+	app.all("/success", staticPage("success")); //Stipe checkout beta
+	app.all("/canceled", staticPage("canceled")); //Stripe checkout beta
 
 	app.get("/api/twitter", routes.api.twitter);
 	//app.post("/api/newsletter/subscribe", routes.views.newsletter);//

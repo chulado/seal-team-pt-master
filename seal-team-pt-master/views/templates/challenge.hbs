@@ -1,0 +1,96 @@
+{{#contentFor "title"}}30 Day Eat Clean, Train Dirty Challenge{{/contentFor}}
+{{#contentFor "meta"}}
+<meta name="robots" content="noindex, nofollow">
+<style type="text/css">
+button {
+    border: none;
+    border-radius: 0;
+    box-shadow: none !important;
+    position: relative;
+    background: #f3d124;
+    font-family: "refrigerator-deluxe";
+    color: #62671e;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px 15px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}    
+</style>
+
+{{/contentFor}}
+
+
+<div class="page-section page-section-light page-section-narrow first-thing">
+  <div class="container">
+  
+  <h1>SEAL Team Physical Training</h1>
+  <h2>30 Day Eat Clean, Train Dirty Challenge</h2>
+  <!--
+  <p class="lead">Don't see the answer to your question? {{#link-to "contact"}}Contact us{{/link-to}} for additional intel.</p>
+-->
+
+<p><strong>The 30 Day Challenge kicks off 1/14/2019</strong>.<br>
+<strong>Cost is only $40</strong>.</p>
+<!-- not in use 1/7/19 
+<form action="/challenge-success" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+    data-amount="4000"
+    data-name="SEAL Team PT"
+    data-description="30 Day Challenge"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-zip-code="true">
+  </script>
+</form>
+-->
+
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. -->
+<button id="checkout-button">Join 30 Day Challenge</button>
+<div id="error-message"></div>
+
+<script>
+  var stripe = Stripe('pk_live_hHfbwdmQRoqDe6nokMB33Ih2', {
+    betas: ['checkout_beta_4']
+  });
+
+  var checkoutButton = document.getElementById('checkout-button');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_EIlhDYeQvsbykw', quantity: 1}],
+
+      // Note that it is not guaranteed your customers will be redirected to this
+      // URL *100%* of the time, it's possible that they could e.g. close the
+      // tab between form submission and the redirect.
+      successUrl: window.location.protocol + '//sealteampt.com/success',
+      cancelUrl: window.location.protocol + '//sealteampt.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+</script>
+<br><br>
+
+<iframe class="scribd_iframe_embed" title="SEAL Team Physical Training 30 Day Eat Clean Train Dirty Challenge!" src="https://www.scribd.com/embeds/397010306/content?start_page=1&view_mode=scroll&show_recommendations=false&access_key=key-UcFK9Qox6177IFDjdG6C" data-auto-height="true" data-aspect-ratio="null" scrolling="no" width="100%" height="600" frameborder="0"></iframe>
+
+  </div>
+</div>
+
+
+ 
+

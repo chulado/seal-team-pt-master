@@ -12,7 +12,7 @@
     margin-bottom: 0;
     font-weight: 700;
 }
-.btn-join {
+.btn-cta {
     border: none;
     border-radius: 0;
     box-shadow: none !important;
@@ -26,7 +26,7 @@
     padding: 15px 15px; /*9/25/18*/
     margin: 0 0 10px 0;
     font-weight: 600;
-    min-width:250px; /*9/25/18*/
+    min-width:150px; /*9/25/18*/
 }
 .btn-join:hover,
 .btn-join:focus,
@@ -36,6 +36,9 @@
     color: #fff;
     background-color: #000;
     text-decoration: none
+}
+.form-control {
+	height:38px;
 }
 
 </style>
@@ -47,7 +50,7 @@
     <h1 style="font-size:55px">Basic Fitness Training</h1>
    
     <!--<h1>Take 20% off<br>Our Boot Camp</h1>-->
-	<h2>Next boot camp class begins December 3rd.</h2>
+	<h2>Next boot camp class begins January 7th.</h2>
  
   </div>
 </div>
@@ -114,8 +117,11 @@
 				<strong>Twenty percent</strong> of all registrations for the March boot camp will be <strong>donated to Make-A-Wish Foundation of America</strong>.</p>
 				</div>-->
 
+				<p class="lead">All prices shown are marked 20% off for the January boot camp.
+				</p>
+				<br><br>
 
-				<p class="lead">The 2 week boot camp consists of 10 days of challenging and fun fitness training.
+				<p class="lead">The 2 week boot camp consists of 10 days (weekdays) of challenging and fun fitness training.
 				</p>
 
 				<p> Upon successful completion of the 2 week boot camp, you will be eligible to join SEAL Team Physical Training as a fitness member, at an affordable monthly rate.</p>
@@ -156,7 +162,7 @@
 					</tr>
 					{{#each locations}}
 						<tr>
-							<td><!--<input type="radio" name="location" value="{{id}}">--></td>
+							<td><input type="radio" name="location" value="{{id}}"></td>
 							<td>{{name}}</td>
 							<td>${{price.oneMonth}}</td>
 							<td>${{price.sixMonths}}</td>
@@ -171,24 +177,24 @@
 				<br>
 				<br>
 <br>
-	<p class="lead">Join SEAL Team PT</p>
+	<!--<p class="lead">Join SEAL Team PT</p>
 	<p>Our next 2 Week Boot Camp starts October 1st. Registration requires you to first create an account.</p>
-	<a href="https://clients.mindbodyonline.com/classic/ws?studioid=883222&stype=41&sTG=24&prodId=10126" target="blank" class="btn btn-join">Boot Camp Registration</a>
+	<a href="https://clients.mindbodyonline.com/classic/ws?studioid=883222&stype=41&sTG=24&prodId=10126" target="blank" class="btn btn-join">Join Seam Team PT</a>
 	
 	<a href="https://clients.mindbodyonline.com/classic/ws?studioid=883222&stype=41&sTG=24&prodId=10126" target="blank" class="btn btn-join">Student Registration</a>
+-->
 
-
-				<!--<div class="form-group {{#if validationErrors.membershipType}}has-error{{/if}}">
+				<div class="form-group {{#if validationErrors.membershipType}}has-error{{/if}}">
 					<label class="lead" for="name">Select a Registration Type</label>
 					<select name="membershipType" class="form-control">
 					{{#each membershipTypes}}
 						<option value="{{this._id}}" {{#ifeq formData.membershipType this._id}}selected{{/ifeq}}>{{this.name}}</option>
 					{{/each}}
 					</select>
-				</div>-->
+				</div>
 
 
-				<!--<hr>
+				<hr>
 
 				<br>
 				<p class="lead">Personal Information</p>
@@ -221,9 +227,9 @@
 							<option value="XL" {{#ifeq formData.tshirt "XL"}}selected{{/ifeq}}>XL</option>
 							<option value="XXL" {{#ifeq formData.tshirt "XXL"}}selected{{/ifeq}}>XXL</option>
 							</select>
-				</div>-->
+				</div>
 					<hr>
-					<!--
+					
 				<div class="form-group {{#if validationErrors.address}}has-error{{/if}}">
 					<label for="address">Address</label>
 					<textarea name="address" rows="2" class="form-control">{{formData.address}}</textarea>
@@ -278,13 +284,13 @@
 					<label for="emailReferral">Email</label>
 					<input type="email" name="emailReferral" class="form-control" value="{{formData.emailReferral}}">
 				</div>
--->
-				<!--
+
+				
 				<hr>
 
 				<div class="form-actions">
 					<button type="submit" class="btn btn-cta">Next</button>
-				</div> -->
+				</div>
 			</form>
 		{{/ifeq}}
 		
