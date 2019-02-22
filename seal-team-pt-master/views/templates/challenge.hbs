@@ -1,4 +1,4 @@
-{{#contentFor "title"}}30 Day Eat Clean, Train Dirty Challenge{{/contentFor}}
+{{#contentFor "title"}}Free Boot Camp with 12 Month Membership{{/contentFor}}
 {{#contentFor "meta"}}
 <meta name="robots" content="noindex, nofollow">
 <style type="text/css">
@@ -17,6 +17,17 @@ button {
     margin: 0 0 10px 0;
     font-weight: 600;
 }    
+h1 {
+    font-family: "refrigerator-deluxe";
+    text-transform: uppercase;
+    color: rgba(25, 22, 31, 0.65);
+    font-weight: 900;
+    line-height: 0.9em;
+}
+p {
+    font-size: 20px;
+    color: #444;
+}
 </style>
 
 {{/contentFor}}
@@ -25,35 +36,23 @@ button {
 <div class="page-section page-section-light page-section-narrow first-thing">
   <div class="container">
   
-  <h1>SEAL Team Physical Training</h1>
-  <h2>30 Day Eat Clean, Train Dirty Challenge</h2>
+  <h1>Free Boot Camp</h1>
+  <h2>With a 12 month membership</h2>
   <!--
   <p class="lead">Don't see the answer to your question? {{#link-to "contact"}}Contact us{{/link-to}} for additional intel.</p>
 -->
-
-<p><strong>The 30 Day Challenge kicks off 1/14/2019</strong>.<br>
-<strong>Cost is only $40</strong>.</p>
-<!-- not in use 1/7/19 
-<form action="/challenge-success" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-    data-amount="4000"
-    data-name="SEAL Team PT"
-    data-description="30 Day Challenge"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto"
-    data-zip-code="true">
-  </script>
-</form>
--->
-
+<br><br>
+<p>Purchase a 12 month basic fitness membership and get the <strong>2 week boot camp for free!</strong><br><br>
+The cost of 12 month membership is $85/mo for <strong>unlimited classes
+</strong> and an <strong>official SEAL Team Physical Training t-shirt
+</strong>.</p>
+<p><strong>Valid until February 7, 2019</strong>.</p>
 
 <!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 
 <!-- Create a button that your customers click to complete their purchase. -->
-<button id="checkout-button">Join 30 Day Challenge</button>
+<button id="checkout-button">Buy Membership</button>
 <div id="error-message"></div>
 
 <script>
@@ -66,7 +65,7 @@ button {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_EIlhDYeQvsbykw', quantity: 1}],
+      items: [{sku: 'sku_EPZAjcAHOUemZZ', quantity: 1}],
 
       // Note that it is not guaranteed your customers will be redirected to this
       // URL *100%* of the time, it's possible that they could e.g. close the
@@ -85,8 +84,16 @@ button {
   });
 </script>
 <br><br>
+<img src="/images/boot-camp.jpg" alt-"SEAL Team Physical Training Program">
+<br><br> 
+<br>
+<p>Please read carefully. When you purchase the SEAL Team Physical Training membership you agree that this for a 1 year membership, billed at $85 per month. The two-week boot camp, a value of $169 is yours at no additional charge. The official t-shirt is provided at no additional charge.</p>
 
-<iframe class="scribd_iframe_embed" title="SEAL Team Physical Training 30 Day Eat Clean Train Dirty Challenge!" src="https://www.scribd.com/embeds/397010306/content?start_page=1&view_mode=scroll&show_recommendations=false&access_key=key-UcFK9Qox6177IFDjdG6C" data-auto-height="true" data-aspect-ratio="null" scrolling="no" width="100%" height="600" frameborder="0"></iframe>
+<p>Students and service employees are eligible for a 10% discount. This discount will be applied prior to your second monthly payment.</p>
+
+<p>We will contact you upon completion of this transaction to get your t-shirt size, and provide you will additional information you will need to begin your training.</p>
+
+
 
   </div>
 </div>
