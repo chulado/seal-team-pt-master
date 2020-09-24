@@ -8,7 +8,7 @@
 <meta property="og:description" content="The 2 week boot camp consists of 10 days of challenging and fun fitness training.">
 <style type="text/css">
 .lead {
-    line-height: 0.9em;
+    line-height: 1.2;
     margin-bottom: 0;
     font-weight: 700;
 }
@@ -25,8 +25,28 @@
     position: relative;
     padding: 15px 15px; /*9/25/18*/
     margin: 0 0 10px 0;
-    font-weight: 600;
     min-width:150px; /*9/25/18*/
+    display:inline;
+}
+.btn-clear {
+    border: none;
+    border-radius: 0;
+    box-shadow: none !important;
+    position: relative;
+    background: #818080;
+    font-family: "refrigerator-deluxe";
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 15px 15px; /*9/25/18*/
+    margin: 0 0 10px 0;
+    min-width:150px; /*9/25/18*/
+    display:inline;
+}
+.btn-clear:hover {
+    color: #fff;
+    background: #333;
 }
 .btn-join:hover,
 .btn-join:focus,
@@ -40,18 +60,30 @@
 .form-control {
 	height:38px;
 }
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #989898;
+}
+.sub-head {
+	font-size:6rem;
+}
+.signature-area canvas {
+    margin-bottom: 30px;
+}
 
 </style>
 {{/contentFor}}
 
 <div class="page-section page-section-light page-section-narrow first-thing">
   <div class="container">
-   <h1>2 Week Boot Camp</h1>
-    <h1 style="font-size:55px">Basic Fitness Training</h1>
+   <h1>Introduction to</h1>
+   <h1 class="sub-head">Basic Fitness Training</h1>
    
-    <!--<h1>Take 20% off<br>Our Boot Camp</h1>-->
-	<h2>Next boot camp class begins May 6th.</h2>
- 
+    <!--<h1>Take 20% off<br>Our Boot Camp</h1>
+	<h2>Next boot camp class begins April 6th.</h2>
+ -->
   </div>
 </div>
 
@@ -89,15 +121,24 @@
 				<p style="color:#31708f">
 				<strong>Twenty percent</strong> of all registrations for the March boot camp will be <strong>donated to Make-A-Wish Foundation of America</strong>.</p>
 				</div>-->
+				<hr>
 
+				<p class="lead">Classes have restarted at all 4 locations. All outdoor classes will incorporate social distancing and be comprised of 100 people or less.
+				</p>
+				<p>Updated 7/17/20, 2:17pm ET.
+				</p>
 
+				<hr>
+
+				<!--
 				<p class="lead">The 2 week boot camp consists of 10 days (weekdays) of challenging and fun fitness training.
 				</p>
 
 				<p> Upon successful completion of the 2 week boot camp, you will be eligible to join SEAL Team Physical Training as a fitness member, at an affordable monthly rate.</p>
+			-->
 
-				<p class="lead">Use code team40 to save 40%.</p>
-				<p>Upon successful registration, we will refund the discount to your card.</p>
+				<!--<p class="lead">Use code team40 to save 40%.*</p>
+				<p>*Upon successful registration, we will refund the 40% discount to your card the same day.</p>-->
 
 
 				<!--<p>The cost for the 2 Week Boot Camp is a one-time fee of $250 (discounts are offered for students and professionals).</p>
@@ -118,7 +159,7 @@
 				<p>&nbsp;</p>
 
 
-				<p class="lead">Boot Camp Locations</p>
+				<p class="lead">Work Out Locations</p>
 				
 				<table class="table">
 					<tr class="head-sub">
@@ -129,9 +170,9 @@
 					<tr class="head-sub">
 						<td></td>
 						<td style="width:33%">&nbsp;</td>
-						<td style="width:33%">Boot Camp</td>
+						<td style="width:33%">Basic Fitness</td>
 						
-						<td style="width:33%">Boot Camp Student*</td>
+						<td style="width:33%">Basic Fitness Student*</td>
 					</tr>
 					{{#each locations}}
 						<tr>
@@ -278,10 +319,9 @@
 					<div class="signature-area-body">
 						<canvas></canvas>
 					</div>
-					<button type="button" class="clear-signature btn btn-secondary">Clear</button>
-				</div>
-				<hr>
-				<div class="form-actions">
+					<button type="button" class="clear-signature btn btn-clear">Clear</button>
+	
+				
 					<button type="submit" class="btn btn-cta">Next</button>
 				</div>
 			</form>
