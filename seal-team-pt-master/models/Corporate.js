@@ -44,7 +44,7 @@ Corporate.schema.methods.sendNotificationEmail = function(callback) {
 			from: {
 				name: 'SEAL Team Physical Training',
 				//email: 'spttmailbox@gmail.com'
-				email: 'admin@sealteampt.com'
+				email: 'john@sealteampt.com'
 			},
 			subject: 'Corporate Team Building',
 			enquiry: enquiry
